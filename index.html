@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | iBOOKS by M&R</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/images-ibooks/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="background-overlay"></div>
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <img src="images-ibooks/footer.svg" alt="Logo" class="sidebar-logo-img">
+        </div>
+        <ul class="sidebar-menu">
+            <li>
+                <img src="icons/home.png" alt="Home" class="menu-icon">
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <img src="icons/book-stack-xxl.png" alt="Collection" class="menu-icon">
+                <a href="collections.html">Collection</a>
+            </li>
+            <li>
+                <img src="icons/about-xxl.png" alt="About" class="menu-icon">
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <img src="icons/contact.png" alt="Contact" class="menu-icon">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <nav class="navbar">
+        <!-- Left side: Logo or image -->
+        <div class="nav-left">
+            <a href="index.html">
+                <img src="images-ibooks/header-nav.png" alt="Logo" class="nav-logo">
+            </a>
+        </div>
+
+        <!-- Right side: Menu items and search bar -->
+        <div class="nav-right">
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="collections.html">COLLECTIONS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="nav-search">
+                <input type="text" id="search-input" name="query" placeholder="Search..."
+                    onkeydown="handleSearch(event)">
+            </div>
+        </div>
+
+        <!-- Hamburger menu button -->
+        <button class="hamburger-menu" onclick="toggleSidebar()">&#9776;</button>
+
+        <!-- Search Bar for Mobile -->
+        <div class="search-bar-mobile">
+            <input checked="" class="checkbox" type="checkbox">
+            <div class="mainbox">
+                <div class="iconContainer">
+                    <img src="icons/search-icon.png" alt="Search Icon" class="search_icon">
+                </div>
+                <input class="search_input" placeholder="Search..." type="text" id="mobile-search-input">
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero"></section>
+
+    <!-- Category Section Wrapper -->
+    <div class="categories-container-wrapper">
+        <h1 id="popularCategories">Popular Categories</h1>
+        <!-- Category Containers -->
+        <div class="categories-container">
+            <div class="category">
+                <img src="images-ibooks/self-help.jfif" alt="Self-Help" class="category-image">
+                <h2>Self-Help</h2>
+                <a href="/category-html/self-help.html" class="browse-button">BROWSE</a>
+            </div>
+            <div class="category">
+                <img src="images-ibooks/romance.jpg" alt="Romance" class="category-image">
+                <h2>Romance</h2>
+                <a href="/category-html/romance.html" class="browse-button">BROWSE</a>
+            </div>
+            <div class="category">
+                <img src="images-ibooks/fiction.jpg" alt="Fiction" class="category-image">
+                <h2>Fiction</h2>
+                <a href="/category-html/fiction.html" class="browse-button">BROWSE</a>
+            </div>
+            <div class="category">
+                <img src="images-ibooks/drama.jpg" alt="Drama" class="category-image">
+                <h2>Drama</h2>
+                <a href="/category-html/drama.html" class="browse-button">BROWSE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Su36tpkuo1I?si=jPDJCWy8raFDuo0h"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Featured Author Section -->
+    <div class="featured-author-wrapper">
+        <div class="featured-author-container">
+            <img src="images-ibooks/Ryan_Holiday.webp" alt="Ryan Holiday" class="author-image">
+            <div class="author-details">
+                <h1>Featured Author</h1>
+                <h2>Ryan Holiday</h2>
+                <p>Ryan Holiday is the author of <em>The Obstacle Is the Way</em>, <em>Ego Is the Enemy</em>, and
+                    <em>The Daily Stoic</em>. His works have appeared in publications such as <em>The New York
+                        Times</em>, <em>Forbes</em>, and <em>Harvard Business Review</em>. Since 2012, he has published
+                    several bestselling books on Stoicism and personal development. His book <em>The Obstacle Is the
+                        Way</em> has become a popular guide for athletes, business leaders, and political figures
+                    worldwide.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popular Books Section -->
+    <section class="popular-books-section">
+        <h1>Popular Books</h1>
+        <div class="books-container">
+            <div class="book">
+                <img src="book-covers/thinking-fast-and-slow.jpg" alt="Thinking, Fast & Slow" class="book-cover">
+                <h4>Thinking, Fast & Slow</h4>
+                <p>by Daniel Kahneman</p>
+                <a href="/books-html/thinking-fast.html" class="view-book-button">VIEW BOOK</a>
+            </div>
+            <div class="book">
+                <img src="book-covers/atomic-habits-tiny-changes-remarkable-results.jpg" alt="Atomic Habits"
+                    class="book-cover">
+                <h4>Atomic Habits</h4>
+                <p>by James Clear</p>
+                <a href="/books-html/atomic-habits.html" class="view-book-button">VIEW BOOK</a>
+            </div>
+            <div class="book">
+                <img src="book-covers/it ends with us.jpg" alt="It Ends With Us" class="book-cover">
+                <h4>It Ends With Us</h4>
+                <p>by Colleen Hoover</p>
+                <a href="/books-html/it-ends-with-us.html" class="view-book-button">VIEW BOOK</a>
+            </div>
+            <div class="book">
+                <img src="book-covers/the last olympian.jpg" alt="The Last Olympian" class="book-cover">
+                <h4>The Last Olympian</h4>
+                <p>by Rick Riordan</p>
+                <a href="/books-html/last-olympian.html" class="view-book-button">VIEW BOOK</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Famous Book Rating Section -->
+    <section class="book-ratings-section">
+        <h1>Famous Book Ratings</h1>
+        <table class="book-ratings-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row-white">
+                    <td>Atomic Habits</td>
+                    <td>James Clear</td>
+                    <td class="star-rating">★★★★★</td>
+                </tr>
+                <tr class="row-colored">
+                    <td>It Ends With Us</td>
+                    <td>Colleen Hoover</td>
+                    <td class="star-rating">★★★★☆</td>
+                </tr>
+                <tr class="row-white">
+                    <td>Ego is the Enemy</td>
+                    <td>Ryan Holiday</td>
+                    <td class="star-rating">★★★★★</td>
+                </tr>
+                <tr class="row-colored">
+                    <td>The Last Olympian</td>
+                    <td>Rick Riordan</td>
+                    <td class="star-rating">★★★★★</td>
+                </tr>
+                <tr class="row-white">
+                    <td>The 48 Laws of Power</td>
+                    <td>Robert Greene</td>
+                    <td class="star-rating">★★★★☆</td>
+                </tr>
+                <tr class="row-colored">
+                    <td>The Alchemist</td>
+                    <td>Paulo Coelho</td>
+                    <td class="star-rating">★★★★☆</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <!-- Footer Section (Desktop/Tablet) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <section class="contact-section">
+                    <img src="images-ibooks/footer.svg" alt="Company Logo" class="logo" />
+                    <div class="contact-info">
+                        <p class="contact-text">For inquiries/concerns <br /> get in touch with us at</p>
+                        <div class="email-container">
+                            <a href="mailto:support@ibooksbymnr.com" class="email-container" target="_blank">
+                                <img src="icons/icons8-email-50.png" alt="Email Icon" class="email-icon" />
+                                <span class="email-address">support@ibooksbymnr.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <nav class="categories-section">
+                    <h2 class="section-title">CATEGORIES</h2>
+                    <a href="/category-html/fiction.html" class="category-item">Fiction</a>
+                    <a href="/category-html/non-fiction.html" class="category-item">Non-Fiction</a>
+                    <a href="/category-html/romance.html" class="category-item">Romance</a>
+                    <a href="/category-html/self-help.html" class="category-item">Self-Help</a>
+                    <a href="/category-html/sci-fi.html" class="category-item">Sci-fi & Fantasy</a>
+                    <a href="/category-html/drama.html" class="category-item">Drama</a>
+                </nav>
+                <nav class="about-section">
+                    <h2 class="section-title">ABOUT</h2>
+                    <a href="about.html#about" class="category-item">About Us</a>
+                    <a href="about.html#terms" class="category-item">Terms</a>
+                    <a href="about.html#privacy-policy" class="category-item">Privacy</a>
+                </nav>
+                <div class="social-section">
+                    <h2 class="section-title">SOCIAL MEDIA</h2>
+                    <div class="social-container">
+                        <div class="social-item">
+                            <a href="https://www.facebook.com/ibooksbymnr" target="_blank" class="social-link">
+                                <img src="icons/fb.jpg" class="social-icon" alt="Facebook">
+                                <span class="social-text">iBOOKS by M&R</span>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://twitter.com/ibooksbymnr" target="_blank" class="social-link">
+                                <img src="icons/x.png" class="social-icon" alt="Twitter">
+                                <span class="social-text">@ibooksbymnr</span>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://www.instagram.com/ibooksbymnr" target="_blank" class="social-link">
+                                <img src="icons/ig.png" class="social-icon" alt="Instagram">
+                                <span class="social-text">ibooksbymnr</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="footer-divider" />
+            <div class="copyright-section">
+                <span class="copyright-text">iBOOKS by M&R COPYRIGHT</span>
+                <span class="copyright-icon">&copy;</span>
+                <span class="copyright-year">2024. ALL RIGHTS RESERVED.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

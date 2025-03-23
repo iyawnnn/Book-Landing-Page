@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normal People | iBOOKS by M&R</title>
+    <link rel="icon" type="image/png" href="/images-ibooks/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="background-overlay"></div>
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <img src="/images-ibooks/footer.svg" alt="Logo" class="sidebar-logo-img">
+        </div>
+        <ul class="sidebar-menu">
+            <li>
+                <img src="/icons/home.png" alt="Home" class="menu-icon">
+                <a href="/index.html">Home</a>
+            </li>
+            <li>
+                <img src="/icons/book-stack-xxl.png" alt="Collection" class="menu-icon">
+                <a href="/collections.html">Collection</a>
+            </li>
+            <li>
+                <img src="/icons/about-xxl.png" alt="About" class="menu-icon">
+                <a href="/about.html">About</a>
+            </li>
+            <li>
+                <img src="/icons/contact.png" alt="Contact" class="menu-icon">
+                <a href="/contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="/index.html">
+                <img src="/images-ibooks/header-nav.png" alt="Logo" class="nav-logo">
+            </a>
+        </div>
+
+        <!-- Right side: Menu items and search bar -->
+        <div class="nav-right">
+            <ul class="nav-menu">
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/collections.html">COLLECTIONS</a></li>
+                <li><a href="/about.html">ABOUT</a></li>
+                <li><a href="/contact.html">CONTACT</a></li>
+            </ul>
+            <div class="nav-search">
+                <input type="text" id="search-input" name="query" placeholder="Search..."
+                    onkeydown="handleSearch(event)">
+            </div>
+        </div>
+
+        <!-- Hamburger menu button -->
+        <button class="hamburger-menu" onclick="toggleSidebar()">&#9776;</button>
+
+        <!-- Search Bar for Mobile -->
+        <div class="search-bar-mobile">
+            <input checked="" class="checkbox" type="checkbox">
+            <div class="mainbox">
+                <div class="iconContainer">
+                    <img src="/icons/search-icon.png" alt="Search Icon" class="search_icon">
+                </div>
+                <input class="search_input" placeholder="Search..." type="text" id="mobile-search-input">
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="book-container-size">
+        <div class="book-section">
+            <div class="picture-container">
+                <img src="/book-covers/nromal-people.jpg" alt="Normal People Book Cover" class="book-picture">
+            </div>
+            <a href="https://www.nationalbookstore.com/books/26280-normal-people-a-novel-trade-paperback-by-sally-rooney.html?srsltid=AfmBOoosyTb0oKWCWRSglD9qlm17y_oCnT21uCKE2DDft66H17WvsSIK"
+                class="buy-button" target="_blank">BUY BOOK</a>
+            <p class="genres">
+                <strong>Genres:</strong>
+                <span>Literary Fiction</span>, <span>Romance</span>, <br><span>Contemporary Fiction</span>
+            </p>
+        </div>
+
+        <div class="book-details">
+            <h1>Normal People</h1>
+            <p class="author">by Sally Rooney</p>
+            <div class="rating">
+                <span>★★★★★</span>
+            </div>
+
+            <p class="description">
+                Normal People is a tender and intricate exploration of the complex relationship between two Irish
+                teenagers, Connell and Marianne,
+                as they navigate the challenges of love, friendship, and social class during their high school years and
+                beyond.
+                <br><br>
+                Sally Rooney masterfully depicts the emotional turmoil and misunderstandings that often accompany young
+                love.
+                The narrative unfolds in a seamless manner, capturing the characters' evolving dynamics as they
+                oscillate between intimacy and distance.
+                <br><br>
+                <strong>Key insights from the book:</strong><br>
+                - The impact of social status on personal relationships and self-identity.<br>
+                - The struggle for connection in a world filled with miscommunication and emotional barriers.<br>
+                - The profound influence of love and friendship in shaping one's life journey.<br>
+                - The exploration of vulnerability and intimacy in relationships.
+                <br><br>
+                Normal People invites readers to reflect on the complexities of love and the deep-seated connections
+                that define our lives.
+                Rooney's writing is both relatable and profound, making this novel a compelling read that resonates with
+                anyone who has experienced the ups and downs of relationships.
+                <br><br>
+                Through its nuanced characterizations and relatable themes, Normal People offers a poignant look at the
+                ways in which people connect—or fail to connect—with one another.
+            </p>
+        </div>
+    </div>
+
+    <!-- Mobile -->
+    <div class="book-container-mobile">
+        <!-- Book Picture -->
+        <div class="mobile-picture-container">
+            <img src="/book-covers/nromal-people.jpg" alt="Normal People Book Cover" class="mobile-book-picture">
+        </div>
+
+        <!-- Book Title -->
+        <h1 class="mobile-book-title">Normal People</h1>
+
+        <!-- Author -->
+        <p class="mobile-author">by Sally Rooney</p>
+
+        <!-- Rating -->
+        <div class="mobile-rating">
+            <span>★★★★★</span>
+        </div>
+
+        <!-- Buy Button -->
+        <a href="https://www.nationalbookstore.com/books/26280-normal-people-a-novel-trade-paperback-by-sally-rooney.html?srsltid=AfmBOoosyTb0oKWCWRSglD9qlm17y_oCnT21uCKE2DDft66H17WvsSIK"
+            class="mobile-buy-button" target="_blank">BUY BOOK</a>
+
+        <!-- Genres -->
+        <p class="mobile-genres">
+            <strong>Genres:</strong>
+            <span>Literary Fiction</span>, <span>Romance</span>, <br><span>Contemporary Fiction</span>
+        </p>
+
+        <!-- Description -->
+        <p class="mobile-description">
+            *Normal People* is a tender and intricate exploration of the complex relationship between two Irish
+            teenagers, Connell and Marianne,
+            as they navigate the challenges of love, friendship, and social class during their high school years and
+            beyond.
+            <br><br>
+            Sally Rooney masterfully depicts the emotional turmoil and misunderstandings that often accompany young
+            love.
+            The narrative unfolds in a seamless manner, capturing the characters' evolving dynamics as they oscillate
+            between intimacy and distance.
+            <br><br>
+            <strong>Key insights from the book:</strong><br>
+            - The impact of social status on personal relationships and self-identity.<br>
+            - The struggle for connection in a world filled with miscommunication and emotional barriers.<br>
+            - The profound influence of love and friendship in shaping one's life journey.<br>
+            - The exploration of vulnerability and intimacy in relationships.
+            <br><br>
+            *Normal People* invites readers to reflect on the complexities of love and the deep-seated connections that
+            define our lives.
+            Rooney's writing is both relatable and profound, making this novel a compelling read that resonates with
+            anyone who has experienced the ups and downs of relationships.
+            <br><br>
+            Through its nuanced characterizations and relatable themes, *Normal People* offers a poignant look at the
+            ways in which people connect—or fail to connect—with one another.
+        </p>
+    </div>
+
+
+    <!-- Footer Section (Desktop/Tablet) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <section class="contact-section">
+                    <img src="/images-ibooks/footer.svg" alt="Company Logo" class="logo" />
+                    <div class="contact-info">
+                        <p class="contact-text">For inquiries/concerns <br /> get in touch with us at</p>
+                        <div class="email-container">
+                            <a href="mailto:support@ibooksbymnr.com" class="email-container" target="_blank">
+                                <img src="/icons/icons8-email-50.png" alt="Email Icon" class="email-icon" />
+                                <span class="email-address">support@ibooksbymnr.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <nav class="categories-section">
+                    <h2 class="section-title">CATEGORIES</h2>
+                    <a href="/category-html/fiction.html" class="category-item">Fiction</a>
+                    <a href="/category-html/non-fiction.html" class="category-item">Non-Fiction</a>
+                    <a href="/category-html/romance.html" class="category-item">Romance</a>
+                    <a href="/category-html/self-help.html" class="category-item">Self-Help</a>
+                    <a href="/category-html/sci-fi.html" class="category-item">Sci-fi & Fantasy</a>
+                    <a href="/category-html/drama.html" class="category-item">Drama</a>
+                </nav>
+                <nav class="about-section">
+                    <h2 class="section-title">ABOUT</h2>
+                    <a href="/about.html#about" class="category-item">About Us</a>
+                    <a href="/about.html#terms" class="category-item">Terms</a>
+                    <a href="/about.html#privacy-policy" class="category-item">Privacy</a>
+                </nav>
+                <div class="social-section">
+                    <h2 class="section-title">SOCIAL MEDIA</h2>
+                    <div class="social-container">
+                        <div class="social-item">
+                            <a href="https://www.facebook.com/ibooksbymnr" target="_blank" class="social-link">
+                                <img src="/icons/fb.jpg" class="social-icon" alt="Facebook">
+                                <span class="social-text">iBOOKS by M&R</span>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://twitter.com/ibooksbymnr" target="_blank" class="social-link">
+                                <img src="/icons/x.png" class="social-icon" alt="Twitter">
+                                <span class="social-text">@ibooksbymnr</span>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://www.instagram.com/ibooksbymnr" target="_blank" class="social-link">
+                                <img src="/icons/ig.png" class="social-icon" alt="Instagram">
+                                <span class="social-text">ibooksbymnr</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="footer-divider" />
+            <div class="copyright-section">
+                <span class="copyright-text">iBOOKS by M&R COPYRIGHT</span>
+                <span class="copyright-icon">&copy;</span>
+                <span class="copyright-year">2024. ALL RIGHTS RESERVED.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | iBOOKS by M&R</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/images-ibooks/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="background-overlay"></div>
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <img src="images-ibooks/footer.svg" alt="Logo" class="sidebar-logo-img">
+        </div>
+        <ul class="sidebar-menu">
+            <li>
+                <img src="icons/home.png" alt="Home" class="menu-icon">
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <img src="icons/book-stack-xxl.png" alt="Collection" class="menu-icon">
+                <a href="collections.html">Collection</a>
+            </li>
+            <li>
+                <img src="icons/about-xxl.png" alt="About" class="menu-icon">
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <img src="icons/contact.png" alt="Contact" class="menu-icon">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <nav class="navbar">
+        <!-- Left side: Logo or image -->
+        <div class="nav-left">
+            <a href="index.html">
+                <img src="images-ibooks/header-nav.png" alt="Logo" class="nav-logo">
+            </a>
+        </div>
+
+        <!-- Right side: Menu items and search bar -->
+        <div class="nav-right">
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="collections.html">COLLECTIONS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="nav-search">
+                <input type="text" id="search-input" name="query" placeholder="Search..."
+                    onkeydown="handleSearch(event)">
+            </div>
+        </div>
+
+        <!-- Hamburger menu button -->
+        <button class="hamburger-menu" onclick="toggleSidebar()">&#9776;</button>
+
+        <!-- Search Bar for Mobile -->
+        <div class="search-bar-mobile">
+            <input checked="" class="checkbox" type="checkbox">
+            <div class="mainbox">
+                <div class="iconContainer">
+                    <img src="icons/search-icon.png" alt="Search Icon" class="search_icon">
+                </div>
+                <input class="search_input" placeholder="Search..." type="text" id="mobile-search-input">
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h1>About Us</h1>
+        <p>Welcome to iBooks by M&R, your ultimate destination for insightful book recommendations and key takeaways
+            from some of the most influential titles in the literary world. Our mission is to help you discover
+            life-changing books, from bestsellers like Atomic Habits to hidden gems across various genres. Whether
+            you're looking for personal growth, captivating fiction, or lessons on productivity, we’ve got you covered.
+        </p>
+
+        <img src="images-ibooks/about us.jpg" alt="About iBooks by M&R" class="about-image" />
+
+        <p>At iBooks by M&R, we believe that reading is more than just a hobby—it's a way to expand your horizons, gain
+            new perspectives, and apply practical wisdom to everyday life. That's why we go beyond just suggesting
+            books; we provide detailed reviews, summaries of key lessons, and actionable takeaways that you can use to
+            improve your life.</p>
+    </section>
+
+    <!-- Terms and Conditions Section -->
+    <section class="terms" id="terms">
+        <h1>Terms and Conditions</h1>
+        <p>Welcome to iBooks by M&R. By accessing or using our website, you agree to comply with and be bound by the
+            following terms and conditions:</p>
+
+        <ol>
+            <li><strong>Content and Use</strong><br />
+                All content provided on iBooks by M&R is for informational and educational purposes only.
+                While we strive to ensure that the information and book recommendations are accurate, we do not
+                guarantee the completeness or reliability of the content.
+            </li>
+
+            <li><strong>External Links</strong><br />
+                Our website may contain links to external websites for purchasing books.
+                We are not responsible for the content or availability of these external sites.
+            </li>
+
+            <li><strong>Intellectual Property</strong><br />
+                All content, including reviews, summaries, and images, is the property of iBooks by M&R.
+                Unauthorized use of this material is prohibited.
+            </li>
+
+            <li><strong>User Conduct</strong><br />
+                Users are expected to interact respectfully and avoid offensive or inappropriate language in any
+                comments or feedback sections.
+            </li>
+
+            <li><strong>Limitation of Liability</strong><br />
+                iBooks by M&R is not liable for any direct or indirect damages that may arise from the use of this
+                website or the purchase of books through external links.
+            </li>
+        </ol>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section class="privacy-policy" id="privacy-policy">
+        <h1>Privacy Policy</h1>
+        <p>At iBooks by M&R, we are committed to protecting your privacy. This Privacy Policy outlines how we collect,
+            use, and protect your information.</p>
+
+        <ol>
+            <li><strong>Information Collection</strong><br />
+                We may collect personal information such as your name and email address when you subscribe to our
+                newsletter or interact with our website.
+                This information is used to provide updates, recommendations, and special offers.
+            </li>
+
+            <li><strong>Data Usage</strong><br />
+                Your personal information will not be sold, exchanged, or transferred to any other company without your
+                consent, except for the purpose of delivering a service you have requested.
+            </li>
+
+            <li><strong>Third-Party Services</strong><br />
+                We may link to third-party websites for book purchases.
+                These sites have their own privacy policies, and we are not responsible for the content or privacy
+                practices of those websites.
+            </li>
+
+            <li><strong>Security</strong><br />
+                We take reasonable steps to protect your personal information from unauthorized access.
+                However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute
+                security.
+            </li>
+
+            <li><strong>Changes to the Policy</strong><br />
+                We reserve the right to update this privacy policy as needed. Any changes will be posted on this page.
+            </li>
+        </ol>
+    </section>
+
+
+    <!-- Footer Section (Desktop/Tablet) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <section class="contact-section">
+                    <img src="images-ibooks/footer.svg" alt="Company Logo" class="logo" />
+                    <div class="contact-info">
+                        <p class="contact-text">For inquiries/concerns <br /> get in touch with us at</p>
+                        <div class="email-container">
+                            <a href="mailto:support@ibooksbymnr.com" class="email-container" target="_blank">
+                                <img src="icons/icons8-email-50.png" alt="Email Icon" class="email-icon" />
+                                <span class="email-address">support@ibooksbymnr.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <nav class="categories-section">
+                    <h2 class="section-title">CATEGORIES</h2>
+                    <a href="/category-html/fiction.html" class="category-item">Fiction</a>
+                    <a href="/category-html/non-fiction.html" class="category-item">Non-Fiction</a>
+                    <a href="/category-html/romance.html" class="category-item">Romance</a>
+                    <a href="/category-html/self-help.html" class="category-item">Self-Help</a>
+                    <a href="/category-html/sci-fi.html" class="category-item">Sci-fi & Fantasy</a>
+                    <a href="/category-html/drama.html" class="category-item">Drama</a>
+                </nav>
+                <nav class="about-section">
+                    <h2 class="section-title">ABOUT</h2>
+                    <a href="about.html#about" class="category-item">About Us</a>
+                    <a href="about.html#terms" class="category-item">Terms</a>
+                    <a href="about.html#privacy-policy" class="category-item">Privacy</a>
+                </nav>
+                <div class="social-section">
+                    <h2 class="section-title">SOCIAL MEDIA</h2>
+                    <div class="social-container">
+                        <div class="social-item">
+                            <a href="https://www.facebook.com/ibooksbymnr" target="_blank" class="social-link">
+                                <img src="icons/fb.jpg" class="social-icon" alt="Facebook">
+                                <span class="social-text">iBOOKS by M&R</span>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://twitter.com/ibooksbymnr" target="_blank" class="social-link">
+                                <img src="icons/x.png" class="social-icon" alt="Twitter">
+                                <span class="social-text">@ibooksbymnr</span>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://www.instagram.com/ibooksbymnr" target="_blank" class="social-link">
+                                <img src="icons/ig.png" class="social-icon" alt="Instagram">
+                                <span class="social-text">ibooksbymnr</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="footer-divider" />
+            <div class="copyright-section">
+                <span class="copyright-text">iBOOKS by M&R COPYRIGHT</span>
+                <span class="copyright-icon">&copy;</span>
+                <span class="copyright-year">2024. ALL RIGHTS RESERVED.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

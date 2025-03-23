@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | iBOOKS by M&R</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/images-ibooks/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="background-overlay"></div>
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <img src="images-ibooks/footer.svg" alt="Logo" class="sidebar-logo-img">
+        </div>
+        <ul class="sidebar-menu">
+            <li>
+                <img src="icons/home.png" alt="Home" class="menu-icon">
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <img src="icons/book-stack-xxl.png" alt="Collection" class="menu-icon">
+                <a href="collections.html">Collection</a>
+            </li>
+            <li>
+                <img src="icons/about-xxl.png" alt="About" class="menu-icon">
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <img src="icons/contact.png" alt="Contact" class="menu-icon">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <nav class="navbar">
+        <!-- Left side: Logo or image -->
+        <div class="nav-left">
+            <a href="index.html">
+                <img src="images-ibooks/header-nav.png" alt="Logo" class="nav-logo">
+            </a>
+        </div>
+
+        <!-- Right side: Menu items and search bar -->
+        <div class="nav-right">
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="collections.html">COLLECTIONS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="nav-search">
+                <input type="text" id="search-input" name="query" placeholder="Search..."
+                    onkeydown="handleSearch(event)">
+            </div>
+        </div>
+
+        <!-- Hamburger menu button -->
+        <button class="hamburger-menu" onclick="toggleSidebar()">&#9776;</button>
+
+        <!-- Search Bar for Mobile -->
+        <div class="search-bar-mobile">
+            <input checked="" class="checkbox" type="checkbox">
+            <div class="mainbox">
+                <div class="iconContainer">
+                    <img src="icons/search-icon.png" alt="Search Icon" class="search_icon">
+                </div>
+                <input class="search_input" placeholder="Search..." type="text" id="mobile-search-input">
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Contact Form -->
+    <div class="contact-container">
+        <div class="form-container">
+            <h2>Let's Talk</h2>
+            <p>To request a quote, contact us directly or fill out the form and we will get back to you promptly.</p>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+
+                <input type="hidden" name="access_key" value="aae1092f-cdba-4886-9a47-b4353142b43a">
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter Full Name" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" placeholder="Enter Phone Number" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">What's on your mind</label>
+                <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+
+                <div class="form-buttons">
+                    <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                    <button type="reset" class="reset-btn">RESET</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info-container">
+            <img src="icons/mail-removebg-preview.png" alt="Email Icon" class="email-pic">
+            <div class="contact-details">
+                <p>
+                    <img src="icons/location.png" alt="Address Icon" class="icon">
+                    #1 Holy Angel St, Angeles, <br> 2009 Pampanga
+                </p>
+                <p>
+                    <img src="icons/phone-call.png" alt="Phone Icon" class="icon">
+                    +63 9190996856
+                </p>
+                <p>
+                    <img src="icons/email.png" alt="Email Icon" class="icon">
+                    support@ibooksbymnr.com
+                </p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com"><img src="icons/social.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com"><img src="icons/communication.png" alt="Facebook"></a>
+                <a href="https://twitter.com"><img src="icons/twitter.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Section (Desktop/Tablet) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <section class="contact-section">
+                    <img src="images-ibooks/footer.svg" alt="Company Logo" class="logo" />
+                    <div class="contact-info">
+                        <p class="contact-text">For inquiries/concerns <br /> get in touch with us at</p>
+                        <div class="email-container">
+                            <a href="mailto:support@ibooksbymnr.com" class="email-container" target="_blank">
+                                <img src="icons/icons8-email-50.png" alt="Email Icon" class="email-icon" />
+                                <span class="email-address">support@ibooksbymnr.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <nav class="categories-section">
+                    <h2 class="section-title">CATEGORIES</h2>
+                    <a href="/category-html/fiction.html" class="category-item">Fiction</a>
+                    <a href="/category-html/non-fiction.html" class="category-item">Non-Fiction</a>
+                    <a href="/category-html/romance.html" class="category-item">Romance</a>
+                    <a href="/category-html/self-help.html" class="category-item">Self-Help</a>
+                    <a href="/category-html/sci-fi.html" class="category-item">Sci-fi & Fantasy</a>
+                    <a href="/category-html/drama.html" class="category-item">Drama</a>
+                </nav>
+                <nav class="about-section">
+                    <h2 class="section-title">ABOUT</h2>
+                    <a href="about.html#about" class="category-item">About Us</a>
+                    <a href="about.html#terms" class="category-item">Terms</a>
+                    <a href="about.html#privacy-policy" class="category-item">Privacy</a>
+                </nav>
+                <div class="social-section">
+                    <h2 class="section-title">SOCIAL MEDIA</h2>
+                    <div class="social-container">
+                        <div class="social-item">
+                            <a href="https://www.facebook.com/ibooksbymnr" target="_blank" class="social-link">
+                                <img src="icons/fb.jpg" class="social-icon" alt="Facebook">
+                                <span class="social-text">iBOOKS by M&R</span>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://twitter.com/ibooksbymnr" target="_blank" class="social-link">
+                                <img src="icons/x.png" class="social-icon" alt="Twitter">
+                                <span class="social-text">@ibooksbymnr</span>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://www.instagram.com/ibooksbymnr" target="_blank" class="social-link">
+                                <img src="icons/ig.png" class="social-icon" alt="Instagram">
+                                <span class="social-text">ibooksbymnr</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="footer-divider" />
+            <div class="copyright-section">
+                <span class="copyright-text">iBOOKS by M&R COPYRIGHT</span>
+                <span class="copyright-icon">&copy;</span>
+                <span class="copyright-year">2024. ALL RIGHTS RESERVED.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
