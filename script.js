@@ -22,7 +22,6 @@ function closeSidebar(e) {
 
 document.addEventListener('click', closeSidebar);
 
-
 // Seach Bar
 // Function to handle search on "Enter" key press
 function handleSearch(event) {
