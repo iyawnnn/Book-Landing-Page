@@ -28,10 +28,14 @@ document.addEventListener('click', closeSidebar);
 function handleSearch(event) {
     const searchQuery = document.getElementById('search-input').value.trim();
     
-    // Check if Enter key is pressed and search query is not empty
     if (event.key === "Enter" && searchQuery !== "") {
+        // Ensure the correct path for GitHub Pages
+        const searchPage = window.location.pathname.includes("/category-html/")
+            ? "../search-results.html"
+            : "search-results.html";
+
         // Redirect to the search results page with the search query
-        window.location.href = `/search-results.html?query=${encodeURIComponent(searchQuery)}`;
+        window.location.href = `${searchPage}?query=${encodeURIComponent(searchQuery)}`;
     } else if (event.key === "Enter" && searchQuery === "") {
         alert("Please enter a search term.");
     }
@@ -41,14 +45,17 @@ function handleSearch(event) {
 function handleMobileSearch(event) {
     const searchQuery = document.getElementById('mobile-search-input').value.trim();
 
-    // Check if Enter key is pressed and search query is not empty
     if (event.key === "Enter" && searchQuery !== "") {
-        // Redirect to the search results page with the search query
-        window.location.href = `/search-results.html?query=${encodeURIComponent(searchQuery)}`;
+        const searchPage = window.location.pathname.includes("/category-html/")
+            ? "../search-results.html"
+            : "search-results.html";
+
+        window.location.href = `${searchPage}?query=${encodeURIComponent(searchQuery)}`;
     } else if (event.key === "Enter" && searchQuery === "") {
         alert("Please enter a search term.");
     }
 }
+
 
 // Add event listeners for search inputs
 document.getElementById('search-input')?.addEventListener('keydown', handleSearch);
