@@ -1,22 +1,22 @@
 // Function to toggle the sidebar
 function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
-    const backgroundOverlay = document.querySelector('.background-overlay'); 
-    
-    sidebar.classList.toggle('active'); 
-    backgroundOverlay.classList.toggle('active'); 
+    const backgroundOverlay = document.querySelector('.background-overlay');
+
+    sidebar.classList.toggle('active');
+    backgroundOverlay.classList.toggle('active');
 }
 
 // Function to close the sidebar if clicked outside
 function closeSidebar(e) {
     const sidebar = document.querySelector('.sidebar');
-    const backgroundOverlay = document.querySelector('.background-overlay'); 
+    const backgroundOverlay = document.querySelector('.background-overlay');
     const hamburgerMenu = document.querySelector('.hamburger-menu');
 
     // Check if the click target is outside the sidebar and hamburger menu
     if (!sidebar.contains(e.target) && !hamburgerMenu.contains(e.target)) {
-        sidebar.classList.remove('active'); 
-        backgroundOverlay.classList.remove('active'); 
+        sidebar.classList.remove('active');
+        backgroundOverlay.classList.remove('active');
     }
 }
 
@@ -26,14 +26,13 @@ document.addEventListener('click', closeSidebar);
 // Function to handle search on "Enter" key press
 function handleSearch(event) {
     const searchQuery = document.getElementById('search-input').value.trim();
-    
+
     if (event.key === "Enter" && searchQuery !== "") {
         // Ensure the correct path for GitHub Pages
-        const searchPage = window.location.pathname.includes("/category-html/")
+        const searchPage = window.location.pathname.includes("/books-html/") || window.location.pathname.includes("/category-html/")
             ? "../search-results.html"
             : "search-results.html";
 
-        // Redirect to the search results page with the search query
         window.location.href = `${searchPage}?query=${encodeURIComponent(searchQuery)}`;
     } else if (event.key === "Enter" && searchQuery === "") {
         alert("Please enter a search term.");
@@ -45,7 +44,7 @@ function handleMobileSearch(event) {
     const searchQuery = document.getElementById('mobile-search-input').value.trim();
 
     if (event.key === "Enter" && searchQuery !== "") {
-        const searchPage = window.location.pathname.includes("/category-html/")
+        const searchPage = window.location.pathname.includes("/books-html/") || window.location.pathname.includes("/category-html/")
             ? "../search-results.html"
             : "search-results.html";
 
@@ -248,7 +247,7 @@ let resultsHtml = `
 `;
 
 // Filter books based on search query for title and author
-const filteredBooks = books.filter(book => 
+const filteredBooks = books.filter(book =>
     book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     book.author.toLowerCase().includes(searchQuery.toLowerCase())
 );
