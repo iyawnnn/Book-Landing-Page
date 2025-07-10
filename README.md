@@ -46,20 +46,7 @@ Welcome to **iBOOKs by M&R**! This website is designed to be a comprehensive res
 6. **Engage with Us:**  
    Check out our social media links for updates and community interaction.
 
----
 
-## Requirements
 
-- A modern web browser (Chrome, Firefox, Safari, etc.) for optimal performance.
-- Internet connection for accessing online resources and retailer links.
 
----
-
-## How to Use
-
-Clone the Repository:
-
-```bash
-git clone https://github.com/yourusername/iBOOKs-MR.git
-cd iBOOKs-MR
 
